@@ -6375,7 +6375,7 @@ Text = [[
 
 📂┇[Source Files](t.me/TshakeX_files)
 
-💠┇[Make BoT](t.me/TshakeMakeBOT)
+💠┇[instaBoT](t.me/KKWBOT)
 
 📥┇[YouTube downloader](t.me/bhhBOT)
 
