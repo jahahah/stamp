@@ -17,8 +17,8 @@ print("\27[34m"..[[
 >> Best Source in Telegram
 >> Features fast and powerful
                                                                                                                                                                          
->> CH > @TshakeX
->> CH > @DDDDID 
+>> CH > @DDDDiD
+>> CH > @TshakeX 
 ]].."\27[m")
 
 io.popen("mkdir Tshake_Files")
