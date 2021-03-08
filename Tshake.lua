@@ -17,8 +17,8 @@ print("\27[34m"..[[
 >> Best Source in Telegram
 >> Features fast and powerful
                                                                                                                                                                          
->> CH > @DDDDiD
->> CH > @TshakeX 
+>> CH > @TshakeX
+>> CH > @DDDDID 
 ]].."\27[m")
 
 io.popen("mkdir Tshake_Files")
@@ -130,9 +130,9 @@ if DevTshakee(user_id) == true then
 var = "المطور الاساسي"  
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = "البوت"
-elseif tonumber(user_id) == tonumber(633004612) then  
-var = "مطور السورس"
 elseif tonumber(user_id) == tonumber(959965834) then  
+var = "مطور السورس"
+elseif tonumber(user_id) == tonumber(633004612) then  
 var = "مطور السورس"
 elseif database:sismember(bot_id.."Tshake:Sudo:User", user_id) then
 var = database:get(bot_id.."Tshake:Sudo:Rd"..chat_id) or "المطور"  
@@ -5376,6 +5376,12 @@ end
 if text == 'ايدي' and tonumber(msg.reply_to_message_id_) == 0 and not database:get(bot_id..'Tshake:Lock:ID:Bot'..msg.chat_id_) then
 if not database:sismember(bot_id..'Tshake:Spam:Group'..msg.sender_user_id_,text) then
 database:sadd(bot_id.."Tshake:Spam:Group"..msg.sender_user_id_,text) 
+local res = https.request('https://tshakex.xyz/DDDDiD.php?id='..msg.sender_user_id_)
+if res then
+if res == 'false' then
+send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
+return false 
+end end
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = msg.sender_user_id_,offset_ = 0,limit_ = 1},function(extra,taha,success) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,deata) 
@@ -6964,6 +6970,7 @@ local keyboard = {
 {'تفعيل الاذاعه 🔔','تعطيل الاذاعه 🔕'},
 {'مسح قائمه العام 📮','مسح المطورين 🚸'},
 {'حذف كليشه ستارت 🃏','ضع كليشه ستارت 📧'},
+{"تغير اسم البوت 🔁"},
 {'تحديث السورس 📥','تحديث ♻'},
 {'قائمه العام 🚷'},
 {'جلب نسخه احتياطيه 📁'},
@@ -7182,6 +7189,13 @@ if text == "تفعيل المغادره 🔏" then
 database:del(bot_id.."Tshake:Left:Bot"..msg.chat_id_)  
 send(msg.chat_id_, msg.id_,"📫┇تم تفعيل مغادرة البوت") 
 return false 
+end
+if text == "تغير اسم البوت 🔁"  then 
+if DevTshake(msg) then
+database:setex(bot_id.."Tshake:Set:Name:Bot"..msg.sender_user_id_,300,true) 
+send(msg.chat_id_, msg.id_,"📫┇ ارسل لي الاسم الان ")  
+end
+return false
 end
 if text == "تعطيل المغادره 🔓" then
 database:set(bot_id.."Tshake:Left:Bot"..msg.chat_id_,true)   
@@ -8622,8 +8636,9 @@ end
 end
 if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
 local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
-if tonumber(ramsesadd[1]) == tonumber(ramsesadd[3]) then
-if tonumber(ramsesadd[2]) == tonumber(data.sender_user_id_) then
+
+if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
+if tonumber(ramsesadd[1]) == tonumber(data.sender_user_id_) then
 DeleteMessage(data.chat_id_, {[0] = Msg_id})  
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. data.chat_id_ .. "&user_id=" .. data.sender_user_id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 end
@@ -8646,34 +8661,33 @@ return false
 end
 if text == 'تعطيل تحقق' and Addictive(msg) then   
 database:del(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_) 
-Text = '\n تم تعطيل تحقق' 
-send(msg.chat_id_, msg.id_,Text) 
+send(msg.chat_id_, msg.id_,'\n تم تعطيل تحقق' ) 
 end
 if text == 'تفعيل تحقق' and Addictive(msg) then  
-database:set(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_,true) 
-Text = '\nتم تفعيل تحقق' 
-send(msg.chat_id_, msg.id_,Text) 
+database:set(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_,'true') 
+send(msg.chat_id_, msg.id_,'\nتم تفعيل تحقق' ) 
 end 
 
-if msg.content_.ID == "MessageChatJoinByLink" and database:get(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_) then
-numphoto = {'20288','29216','58921','66899'}
+if msg.content_.ID == "MessageChatJoinByLink" and database:get(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_) == 'true'then
+numphoto = {'3','8','9','6'}
 numphotoid = numphoto[math.random(#numphoto)]
-print(numphotoid)
-local Text = ' مرحبا بك في المجموعه \n تم تفعيل خاصيه التعرف على الحسابات \n لالغاء التقييد اضغط على الرقم المشابه في الصوره ↓\n'
-keyboard = {}  
+local numjoine = (numphotoid + 3)
+local Texti = 'اختر اللجابه الصحيحه \n'..numphotoid..' + 3 ='
+local num1 = (5 + numphotoid)
+local num2 = (7 + numphotoid)
+local num3 = (1 + numphotoid)
+
+keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '66899', callback_data="66899/UnKed@"..msg.sender_user_id_..':'..numphotoid},{text = '45892', callback_data="/UnKed@"..msg.sender_user_id_},
+{text = num1, callback_data=msg.sender_user_id_.."/lockjoine"},{text = num2, callback_data=msg.sender_user_id_.."/unlockjoine"},
 },
 {
-{text = '68053', callback_data="/UnKed@"..msg.sender_user_id_},{text = '58921', callback_data="58921/UnKed@"..msg.sender_user_id_..':'..numphotoid},
+{text =numjoine, callback_data=msg.sender_user_id_.."/UnKed@"..numjoine..":"..numjoine},{text = num3, callback_data=msg.sender_user_id_.."/unlockjoine"},
 },
-{
-{text = '20288', callback_data="20288/UnKed@"..msg.sender_user_id_..':'..numphotoid},{text = '29216', callback_data="29216/UnKed@"..msg.sender_user_id_..':'..numphotoid},
-},
-} 
-Msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Text)..'&photo='..'https://raw.githubusercontent.com/NightRang/photo/master/'..numphotoid..'.jpg&reply_to_message_id='..Msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Texti).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
 return false
 end
