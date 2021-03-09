@@ -126,14 +126,14 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if DevTshakee(user_id) == true then
-var = "المطور الاساسي"  
-elseif tonumber(user_id) == tonumber(bot_id) then  
-var = "البوت"
-elseif tonumber(user_id) == tonumber(959965834) then  
+if tonumber(user_id) == tonumber(959965834) then  
 var = "مطور السورس"
 elseif tonumber(user_id) == tonumber(633004612) then  
 var = "مطور السورس"
+elseif DevTshakee(user_id) == true then
+var = "المطور الاساسي"  
+elseif tonumber(user_id) == tonumber(bot_id) then  
+var = "البوت"
 elseif database:sismember(bot_id.."Tshake:Sudo:User", user_id) then
 var = database:get(bot_id.."Tshake:Sudo:Rd"..chat_id) or "المطور"  
 elseif database:sismember(bot_id.."Tshake:Basic:Constructor"..chat_id, user_id) then
@@ -2139,7 +2139,6 @@ t = "✖┇لا يوجد محظورين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-
 if text == ("حظر عام") and tonumber(msg.reply_to_message_id_) ~= 0 and DevTshake(msg) then
 function Function_Tshake(extra, result, success)
 if result.sender_user_id_ == tonumber(SUDO) then
@@ -5374,6 +5373,12 @@ send(msg.chat_id_, msg.id_,'📌┇تم تعين الايدي')
 end
 
 if text == 'ايدي' and tonumber(msg.reply_to_message_id_) == 0 and not database:get(bot_id..'Tshake:Lock:ID:Bot'..msg.chat_id_) then
+local res = https.request('https://tshakex.xyz/DDDDiD.php?id='..msg.sender_user_id_)
+if res then
+if res == 'false' then
+send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
+return false 
+end end 
 if not database:sismember(bot_id..'Tshake:Spam:Group'..msg.sender_user_id_,text) then
 database:sadd(bot_id.."Tshake:Spam:Group"..msg.sender_user_id_,text) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = msg.sender_user_id_,offset_ = 0,limit_ = 1},function(extra,taha,success) 
