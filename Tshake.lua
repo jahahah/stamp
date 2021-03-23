@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,633004612,959965834}
+List_Sudos = {Id_Sudo,633004612,1753144681}
 print("\27[34m"..[[
 
 >> Best Source in Telegram
@@ -136,7 +136,7 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if tonumber(user_id) == tonumber(959965834) then  
+if tonumber(user_id) == tonumber(1753144681) then  
 var = "مطور السورس"
 elseif tonumber(user_id) == tonumber(633004612) then  
 var = "مطور السورس"
@@ -4866,7 +4866,7 @@ if DevTshake(msg) then
 database:srem(bot_id.."Tshake:GBan:User",result.sender_user_id_)
 database:srem(bot_id.."Tshake:Ban:User"..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id.."Tshake:Muted:User"..msg.chat_id_,result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","\n📫┇ تم الغاء القيود عنه")  
+Reply_Status(msg,result.sender_user_id_,"reply","\n??┇ تم الغاء القيود عنه")  
 else
 database:srem(bot_id.."Tshake:Ban:User"..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id.."Tshake:Muted:User"..msg.chat_id_,result.sender_user_id_)
@@ -5507,39 +5507,6 @@ local Ttext = text:match('^بحث (.*)$')
 local msgin = msg.id_/2097152/0.5 
 https.request('https://devstorm.ml/tshakexs.php?token='..token..'&chat_id='..msg.chat_id_..'&Text='..URL.escape(Ttext)..'&msg='..msgin)
 end
-if text and text:match('^(.*) !!$') and not database:get(bot_id..'dw:bot:api'..msg.chat_id_) then            
-local Ttext = text:match('^(.*) !!$') 
-local ytddl = https.request('https://devstorm.ml/sr.php?search='..URL.escape(Ttext))
-local zxe = JSON.decode(ytddl)
-for k,v in pairs(zxe.results) do
-if k == 1 then
-local msgin = msg.id_/2097152/0.5 
-https.request('https://devstorm.ml/yt.php?url='..v.url..'&token='..token..'&chat='..msg.chat_id_..'&type=mp3&msg='..msgin)
-end
-end
-end
-if text and text:match('^(.*) ؟؟$') and not database:get(bot_id..'dw:bot:api'..msg.chat_id_) then            
-local Ttext = text:match('^(.*) ؟؟$') 
-local ytddl = https.request('https://devstorm.ml/sr.php?search='..URL.escape(Ttext))
-local zxe = JSON.decode(ytddl)
-for k,v in pairs(zxe.results) do
-if k == 1 then
-local msgin = msg.id_/2097152/0.5 
-https.request('https://devstorm.ml/yt.php?url='..v.url..'&token='..token..'&chat='..msg.chat_id_..'&type=ogg&msg='..msgin)
-end
-end
-end
-if text and text:match('^(.*) !$') and not database:get(bot_id..'dw:bot:api'..msg.chat_id_) then            
-local Ttext = text:match('^(.*) !$') 
-local ytddl = https.request('https://devstorm.ml/sr.php?search='..URL.escape(Ttext))
-local zxe = JSON.decode(ytddl)
-for k,v in pairs(zxe.results) do
-if k == 1 then
-local msgin = msg.id_/2097152/0.5 
-https.request('https://devstorm.ml/yt.php?url='..v.url..'&token='..token..'&chat='..msg.chat_id_..'&type=mp4&msg='..msgin)
-end
-end
-end
 if text == 'تعين الايدي' and Owner(msg) then
 database:setex(bot_id.."Tshake:Set:Id:Gp"..msg.chat_id_..""..msg.sender_user_id_,240,true)  
 local Text= [[
@@ -6029,7 +5996,7 @@ name = string.gsub(name,"😸","😹😹😹😹😹😹😹😹😸😹😹😹
 name = string.gsub(name,"☠","💀💀💀💀💀💀💀☠💀💀💀💀💀")
 name = string.gsub(name,"🐼","👻👻👻🐼👻👻👻👻👻👻👻")
 name = string.gsub(name,"🐇","🕊🕊🕊🕊🕊🐇🕊🕊🕊🕊")
-name = string.gsub(name,"🌑","🌚🌚🌚🌚🌚🌑🌚🌚🌚")
+name = string.gsub(name,"🌑","🌚🌚🌚🌚🌚🌑🌚🌚??")
 name = string.gsub(name,"🌚","🌑🌑🌑🌑🌑🌚🌑🌑🌑")
 name = string.gsub(name,"⭐️","🌟🌟🌟🌟🌟🌟🌟🌟⭐️🌟🌟🌟")
 name = string.gsub(name,"✨","💫💫💫💫💫✨💫💫💫💫")
