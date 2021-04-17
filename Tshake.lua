@@ -12,6 +12,20 @@ sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
 List_Sudos = {Id_Sudo,633004612,1753144681}
+print([[
+
+   ________         __         ______   __        ________        __    __ 
+/        |       /  |       /      \ /  |      /        |      /  |  /  |
+$$$$$$$$/_______ $$ |____  /$$$$$$  |$$ |   __ $$$$$$$$/       $$ |  $$ |
+   $$ | /       |$$      \ $$ |__$$ |$$ |  /  |$$ |__          $$  \/$$/ 
+   $$ |/$$$$$$$/ $$$$$$$  |$$    $$ |$$ |_/$$/ $$    |          $$  $$<  
+   $$ |$$      \ $$ |  $$ |$$$$$$$$ |$$   $$<  $$$$$/            $$$$  \ 
+   $$ | $$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$  \ $$ |_____        $$ /$$  |
+   $$ |/     $$/ $$ |  $$ |$$ |  $$ |$$ | $$  |$$       |      $$ |  $$ |
+   $$/ $$$$$$$/  $$/   $$/ $$/   $$/ $$/   $$/ $$$$$$$$/       $$/   $$/ 
+
+
+]])
 print("\27[34m"..[[
 
 >> Best Source in Telegram
@@ -21,7 +35,7 @@ print("\27[34m"..[[
 >> CH > @TshakeX 
 ]].."\27[m")
 
-io.popen("mkdir Tshake_Files")
+io.popen("mkdir -p Tshake_Files")
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls Tshake_Files'):lines() do
@@ -575,6 +589,7 @@ function Tshake_Started_Bot(msg,data) -- بداية العمل
 if msg then
 local msg = data.message_
 local text = msg.content_.text_
+if msg.sender_user_id_ == tonumber(bot_id) then return false end
 if msg.chat_id_ then
 local id = tostring(msg.chat_id_)
 if id:match("-100(%d+)") then
@@ -587,6 +602,49 @@ else
 Chat_Type = 'GroupBot' 
 end
 end
+
+if text and text:match("@[%a%d_]+") and  msg.sender_user_id_ == tonumber(Id_Sudo) and database:get(bot_id..":usernewsudo:"..msg.sender_user_id_) then 
+function Function_Tshake(arg, data)
+msg = arg.msg
+if data.id_ then
+if (data and data.type_ and data.type_.ID == "ChannelChatInfo") then
+send(msg.chat_id_,msg.id_,"💢┇ عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
+return false 
+end
+idmsgq = database:get(bot_id..":usernewsudo:"..msg.sender_user_id_)
+DeleteMessage(msg.chat_id_,{[0] = idmsgq}) 
+local Tshake_Info_Sudo = io.open("sudo.lua", 'w')
+Tshake_Info_Sudo:write([[
+token = "]]..token..[["
+
+Sudo = ]]..data.id_..[[  
+
+UserName = "]]..msg.content_.text_..[[" ;
+]])
+Tshake_Info_Sudo:close()
+send(msg.chat_id_,msg.id_,"🚧┇ تم تغيير المطور الاساسي للبوت بنجاح .")
+database:del(bot_id..":usernewsudo:"..msg.sender_user_id_)
+dofile('Tshake.lua')  
+else
+send(msg.chat_id_, msg.id_,"💢┇ لا يوجد حساب بهاذا المعرف")
+end
+end
+tdcli_function ({ID = "SearchPublicChat",username_ = text},Function_Tshake,{msg=msg})
+
+
+
+return false
+end
+
+if text == "تغير المطور الاساسي" and  msg.sender_user_id_ == tonumber(Id_Sudo) then 
+local Text = "🚧 ┇سوف يتم تغير المطور الاساسي\n❗️ ┇هل  انت  متأكد من هذا التغير ؟"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = 'نعم', callback_data=msg.sender_user_id_.."/yesS"},{text = 'كلا , الغاء', callback_data=msg.sender_user_id_.."/noS"}}}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+
 if database:get(bot_id.."Tshake:Tshake:Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == "الغاء" or text == "الغاء ✖" then   
 send(msg.chat_id_, msg.id_,"📫┇تم الغاء الاذاعه") 
@@ -681,7 +739,7 @@ end
 end
 end
 if text and database:get(bot_id..'lock:Fars'..msg.chat_id_) and not Addictive(msg) then 
-list = {"ڄ","که","پی","خسته","برم","راحتی","بیام","بپوشم","كرمه","چه","چ","ڬ","ٺ","چ","ڇ","ڿ","ڀ","ڎ","ݫ","ژ","ڟ","ݜ","ڸ","پ","۴","زدن","دخترا","دیوث","مک","زدن"}
+list = {"که","پی","خسته","برم","راحتی","بیام","بپوشم","كرمه","چه","ڬ","ڿ","ڀ","ڎ","ژ","ڟ","ݜ","ڸ","پ","۴","زدن","دخترا","دیوث","مک","زدن"}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_}) 
@@ -1024,7 +1082,7 @@ end
 --------------------------------------------------------------------------------------------------------------
 if msg.content_.entities_ then 
 if msg.content_.entities_[0] then 
-if msg.content_.entities_[0] and msg.content_.entities_[0].ID == "MessageEntityUrl" or msg.content_.entities_[0].ID == "MessageEntityTextUrl" then      
+if msg.content_.entities_[0].ID == "MessageEntityUrl" or msg.content_.entities_[0].ID == "MessageEntityTextUrl" then      
 if not Vips(msg) then
 if database:get(bot_id.."Tshake:Lock:Markdaun"..msg.chat_id_) == "del" then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_}) 
@@ -5551,12 +5609,11 @@ database:sadd(bot_id.."Tshake:Spam:Group"..msg.sender_user_id_,text)
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = msg.sender_user_id_,offset_ = 0,limit_ = 1},function(extra,taha,success) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,deata) 
-tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da)
-if da.status_.ID == "ChatMemberStatusCreator" then 
+if deata.status_.ID == "ChatMemberStatusCreator" then 
 rtpa = 'منشئ'
-elseif da.status_.ID == "ChatMemberStatusEditor" then 
+elseif deata.status_.ID == "ChatMemberStatusEditor" then 
 rtpa = 'ادمن' 
-elseif da.status_.ID == "ChatMemberStatusMember" then 
+elseif deata.status_.ID == "ChatMemberStatusMember" then 
 rtpa = 'عضو'
 end
 
@@ -5628,7 +5685,6 @@ end
 end,nil)   
 end,nil)   
 end,nil)   
-end,nil)   
 end
 end
 if text == 'فتح التنظيف' and Owner(msg) then   
@@ -5652,6 +5708,7 @@ Message = Message - 1048576
 end
 send(msg.chat_id_, msg.id_,'🔰┇تم تنظيف *~ '..Number..'* رساله .')  
 end
+
 
 if text == 'ايدي' and tonumber(msg.reply_to_message_id_) > 0 and not database:get(bot_id..'Tshake:Lock:ID:Bot'..msg.chat_id_) then
 function Function_Tshake(extra, result, success)
@@ -7022,6 +7079,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
+database:set(bot_id.."Tshake:Private:Group:Link"..msg.chat_id_,LinkGp)
 Text = '🔖┇تم تفعيل مجموعه جديده\n'..
 '\n👤┇بواسطة ~ '..Name..''..
 '\n📛┇ايدي المجموعه ~ `'..IdChat..'`'..
@@ -7175,6 +7233,7 @@ local keyboard = {
 {'حذف كليشه ستارت 🃏','ضع كليشه ستارت 📧'},
 {"تغير اسم البوت 🔁"},
 {'تحديث السورس 📥','تحديث ♻'},
+{'معلومات السيرفر 📡'},
 {'قائمه العام 🚷'},
 {'جلب نسخه احتياطيه 📁'},
 {'الغاء ✖'}
@@ -7254,6 +7313,24 @@ if text == 'تعطيل التواصل 🔰' then
 database:set(bot_id..'Texting:In:Bv',true) 
 send(msg.chat_id_, msg.id_,'🔘┇ تم تعطيل التواصل ') 
 end
+if text == 'معلومات السيرفر 📡' then
+   ioserver =  io.popen([[
+         linux_version=`lsb_release -ds`
+         memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }'`
+         HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
+         CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
+         uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
+         echo '📟l •⊱ { نظام التشغيل } ⊰•\n*»» '"$linux_version"'*' 
+         echo '*------------------------------\n*🔖l •⊱ { الذاكره العشوائيه } ⊰•\n*»» '"$memUsedPrc"'*'
+         echo '*------------------------------\n*💾l •⊱ { وحـده الـتـخـزيـن } ⊰•\n*»» '"$HardDisk"'*'
+         echo '*------------------------------\n*⚙️l •⊱ { الـمــعــالــج } ⊰•\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+         echo '*------------------------------\n*📡l •⊱ { موقـع الـسـيـرفـر } ⊰•\n*»» '`curl http://th3boss.com/ip/location`'*'
+         echo '*------------------------------\n*👨🏾‍🔧l •⊱ { الــدخــول } ⊰•\n*»» '`whoami`'*'
+         echo '*------------------------------\n*🔌l •⊱ { مـده تـشغيـل الـسـيـرفـر } ⊰•  \n*»» '"$uptime"'*'
+         ]]):read('*all')
+         send(msg.chat_id_, msg.id_,ioserver)
+   return false
+   end
 if text =='الاحصائيات 📊' then
 local Groups = database:scard(bot_id..'Tshake:Chek:Groups')  
 local Users = database:scard(bot_id..'Tshake:UsersBot')  
@@ -7554,10 +7631,37 @@ end
 function tdcli_update_callback(data)
 if data.ID == "UpdateNewCallbackQuery" then
 tahaj = data
+msg = data
 local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
+vardump(data)
+if Text and Text:match('(.*)/noS') then
+sudoo = Text:gsub("/noS","")
+print(msg.sender_user_id_,sudoo)
+print(msg.sender_user_id_== tonumber(sudoo))
+if msg.sender_user_id_ == tonumber(sudoo) then 
+--DeleteMessage(msg.chat_id_,{[0] = msg.message_id_})
+local Teext = "🚧 ┇ تم الغاء الامر بنجاح ."
+database:del(bot_id..":usernewsudo:"..msg.sender_user_id_)
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..msg.chat_id_..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true') 
+return false
+end
+end
+
+if Text and Text:match('(.*)/yesS') then
+sudoo = Text:gsub("/yesS","")
+if msg.sender_user_id_ == tonumber(sudoo) then 
+local Texxt = "🚧 ┇ حسننا الان يمكنك ارسال معرف المطور الاساسي الجديد ..."
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = 'إالـغـاء الأمـر', callback_data=msg.sender_user_id_.."/noS"}}}
+https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..msg.chat_id_..'&text='..URL.escape(Texxt).."&message_id="..msg_idd.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+database:set(bot_id..":usernewsudo:"..msg.sender_user_id_,data.message_id_)
+return false
+end
+end
+
 if Text and Text:match('(.*)/help1') and Addictive(tahaj) then
 if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
 local Teext =[[
@@ -8887,6 +8991,8 @@ end
 if (data.ID == "UpdateNewMessage") then
 local msg = data.message_
 local text = msg.content_.text_
+if msg.sender_user_id_ == tonumber(bot_id) then return false end
+
 if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("OLD MESSAGE")
 return false
@@ -9059,6 +9165,7 @@ Tshake_Started_Bot(msg,data)
 Tshake_Files(msg)
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
+if msg.reply_markup_ and msg.reply_markup_.rows_ then return false end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
 database:incr(bot_id..'Tshake:message_edit'..result.chat_id_..result.sender_user_id_)
 local Text = result.content_.text_
