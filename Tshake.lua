@@ -6628,10 +6628,10 @@ send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
 Text = [[
-🌐┇ Welcome to Source
+🐲┇ Welcome to Source
 🚩┇[ Tm   -  ”X”](t.me/TshakeX)
  ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-🦁┇[Tshake'X' TEAM](t.me/TshakeX)
+🐉┇[Tshake'X' TEAM](t.me/TshakeX)
 
 📂┇[Source Files](t.me/TshakeX_files)
 
