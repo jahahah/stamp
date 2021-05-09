@@ -2354,12 +2354,7 @@ return false
 end
 if text == ("تنزيل مالك") and tonumber(msg.reply_to_message_id_) ~= 0 and DevBot(msg) then 
 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Basic:Constructor23"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المالك")  
@@ -2370,12 +2365,7 @@ end
 if text and text:match("^تنزيل مالك @(.*)$") and DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل مالك @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2506,12 +2496,7 @@ end
 end
 
 if text == ("رفع مالك") and tonumber(msg.reply_to_message_id_) ~= 0 and DevBot(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:sadd(bot_id.."Tshake:Basic:Constructor23"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته مالك")  
@@ -2520,12 +2505,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع مالك @(.*)$") and DevBot(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع مالك @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2545,12 +2525,7 @@ end
 
 
 if text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and DevBot(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:sadd(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته منشئ اساسي")  
@@ -2561,12 +2536,7 @@ end
 if text and text:match("^رفع منشئ اساسي @(.*)$") and not DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع منشئ اساسي @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2588,12 +2558,7 @@ end
 if text and text:match("^رفع منشئ اساسي (%d+)$") and not DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع منشئ اساسي (%d+)$") 
 database:sadd(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم ترقيته منشئ اساسي")  
@@ -2604,12 +2569,7 @@ end
 if text == ("تنزيل منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and not DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المنشئين")  
@@ -2622,12 +2582,7 @@ end
 if text and text:match("^تنزيل منشئ اساسي @(.*)$") and not DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل منشئ اساسي @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2646,12 +2601,7 @@ end
 if text and text:match("^تنزيل منشئ اساسي (%d+)$") and not DevBot(msg) then 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل منشئ اساسي (%d+)$") 
 database:srem(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المنشئين")  
@@ -2661,12 +2611,7 @@ end,nil)
 end
 
 if text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:sadd(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته منشئ اساسي")  
@@ -2675,12 +2620,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع منشئ اساسي @(.*)$") and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع منشئ اساسي @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2698,24 +2638,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end
 if text and text:match("^رفع منشئ اساسي (%d+)$") and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع منشئ اساسي (%d+)$") 
 database:sadd(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم ترقيته منشئ اساسي")  
 return false
 end
 if text == ("تنزيل منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المنشئين")  
@@ -2724,12 +2654,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل منشئ اساسي @(.*)$") and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل منشئ اساسي @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2744,12 +2669,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end
 if text and text:match("^تنزيل منشئ اساسي (%d+)$") and Constructoryyu(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل منشئ اساسي (%d+)$") 
 database:srem(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المنشئين")  
@@ -2757,12 +2677,7 @@ return false
 end
 
 if text == "رفع منشئ" and tonumber(msg.reply_to_message_id_) ~= 0 and BasicConstructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:sadd(bot_id.."Tshake:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته منشئ في المجموعه")  
@@ -2770,12 +2685,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
 end
 if text and text:match("^رفع منشئ @(.*)$") and BasicConstructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع منشئ @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2793,12 +2703,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 end
 ------------------------------------------------------------------------
 if text and text:match("^رفع منشئ (%d+)$") and BasicConstructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع منشئ (%d+)$")
 database:sadd(bot_id.."Tshake:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم ترقيته منشئ في المجموعه")  
@@ -2812,12 +2717,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 ------------------------------------------------------------------------
 if text and text:match("^تنزيل منشئ @(.*)$") and BasicConstructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل منشئ @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2831,24 +2731,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 end
 ------------------------------------------------------------------------
 if text and text:match("^تنزيل منشئ (%d+)$") and BasicConstructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل منشئ (%d+)$")
 database:srem(bot_id.."Tshake:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المنشئين")  
 end
 
 if text == ("رفع مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:sadd(bot_id.."Tshake:Manager"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته مدير المجموعه")  
@@ -2877,12 +2767,7 @@ end,nil)
 send(msg.chat_id_, msg.id_,"📬┇تم ازالة 100 من وسائط ") 
 end
 if text and text:match("^رفع مدير @(.*)$") and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع مدير @(.*)$") 
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2901,24 +2786,14 @@ return false
 end 
 
 if text and text:match("^رفع مدير (%d+)$") and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع مدير (%d+)$") 
 database:sadd(bot_id.."Tshake:Manager"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم ترقيته مدير المجموعه")  
 return false
 end  
 if text == ("تنزيل مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Manager"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المدراء")  
@@ -2927,12 +2802,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end  
 if text and text:match("^تنزيل مدير @(.*)$") and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل مدير @(.*)$")
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -2946,12 +2816,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end  
 if text and text:match("^تنزيل مدير (%d+)$") and Constructor(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل مدير (%d+)$") 
 database:srem(bot_id.."Tshake:Manager"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المدراء")  
@@ -2959,12 +2824,7 @@ return false
 end
 
 if text == ("رفع ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -2977,12 +2837,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع ادمن @(.*)$") and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع ادمن @(.*)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
@@ -3004,12 +2859,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end
 if text and text:match("^رفع ادمن (%d+)$") and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع ادمن (%d+)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
@@ -3020,12 +2870,7 @@ Reply_Status(msg,userid,"reply","💢┇تم ترقيته ادمن للمجمو�
 return false
 end
 if text == ("تنزيل ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Mod:User"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من ادمنيه المجموعه")  
@@ -3034,12 +2879,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل ادمن @(.*)$") and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل ادمن @(.*)$") 
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -3053,12 +2893,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end
 if text and text:match("^تنزيل ادمن (%d+)$") and Owner(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل ادمن (%d+)$")
 database:srem(bot_id.."Tshake:Mod:User"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من ادمنيه المجموعه")  
@@ -3066,12 +2901,7 @@ return false
 end
 
 if text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -3084,12 +2914,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع مميز @(.*)$") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^رفع مميز @(.*)$") 
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
@@ -3112,12 +2937,7 @@ return false
 end
 
 if text and text:match("^رفع مميز (%d+)$") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^رفع مميز (%d+)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'✖┇لا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
@@ -3129,12 +2949,7 @@ return false
 end
 
 if (text == ("تنزيل مميز")) and tonumber(msg.reply_to_message_id_) ~= 0 and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 function Function_Tshake(extra, result, success)
 database:srem(bot_id.."Tshake:Special:User"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المميزين")  
@@ -3143,12 +2958,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل مميز @(.*)$") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local username = text:match("^تنزيل مميز @(.*)$") 
 function Function_Tshake(extra, result, success)
 if result.id_ then
@@ -3162,24 +2972,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake,
 return false
 end
 if text and text:match("^تنزيل مميز (%d+)$") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 local userid = text:match("^تنزيل مميز (%d+)$") 
 database:srem(bot_id.."Tshake:Special:User"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المميزين")  
 return false
 end  
 if text and text:match("رفع (.*)") and tonumber(msg.reply_to_message_id_) > 0 and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end 
+ 
 local RTPA = text:match("رفع (.*)")
 if database:sismember(bot_id.."Tshake:Coomds"..msg.chat_id_,RTPA) then
 function by_reply(extra, result, success)   
@@ -3206,12 +3006,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 if text and text:match("تنزيل (.*)") and tonumber(msg.reply_to_message_id_) > 0 and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end 
+ 
 local RTPA = text:match("تنزيل (.*)")
 if database:sismember(bot_id.."Tshake:Coomds"..msg.chat_id_,RTPA) then
 function by_reply(extra, result, success)   
@@ -3238,12 +3033,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 if text and text:match("^رفع (.*) @(.*)") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end 
+ 
 local text1 = {string.match(text, "^(رفع) (.*) @(.*)$")}
 if database:sismember(bot_id.."Tshake:Coomds"..msg.chat_id_,text1[2]) then
 function py_username(extra, result, success)   
@@ -3273,12 +3063,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil)
 end 
 end
 if text and text:match("^تنزيل (.*) @(.*)") and Addictive(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end 
+ 
 local text1 = {string.match(text, "^(تنزيل) (.*) @(.*)$")}
 if database:sismember(bot_id.."Tshake:Coomds"..msg.chat_id_,text1[2]) then
 function py_username(extra, result, success)   
@@ -3759,6 +3544,8 @@ send(msg.chat_id_, msg.id_, '🔏┇تم تعطيل » الحظر ~ والطرد
 return false
 end
 end
+
+
 if text == "تفعيل الطرد" or text == "تفعيل الحظر" then
 if Constructor(msg) then
 database:del(bot_id.."Ban:Cheking"..msg.chat_id_)
@@ -5066,6 +4853,195 @@ end,nil)
 end,nil)   
 end
 
+
+----==========================================================================================================
+----==========================================================================================================
+
+
+Namebot = (database:get(bot_id.."Tshake:Name:Bot") or "تشاكي")
+ArrayRdods = {
+"تراك ازعجتنا",
+"اسممممممممممييي "..Namebot,
+"؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+"انطم",
+"ياصبر الارض",
+"اسمي "..Namebot,
+"الله يعين",
+"الله يصبرني",
+"ها ",
+"استغفر الله"
+}
+
+if text == "بوت" or text == Namebot then
+NameRandomBot = ArrayRdods[math.random(#ArrayRdods)]
+send(msg.chat_id_, msg.id_," ["..NameRandomBot.."] ") 
+return false 
+end
+
+if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
+if DevTshake(msg) then
+database:setex(bot_id.."Tshake:Set:Name:Bot"..msg.sender_user_id_,300,true) 
+send(msg.chat_id_, msg.id_,"📫┇ ارسل لي الاسم الان ")  
+end
+return false
+end
+
+
+
+if text == "تفعيل تنظيف الوسائط" and Owner(msg)  then
+database:set(bot_id.."lock_cleaner"..msg.chat_id_,true)
+send(msg.chat_id_, msg.id_, '☑┇ تم تفعيل التنظيف الوسائط التلقائي ')
+return false
+end
+
+if text == "تعطيل تنظيف الوسائط" and Owner(msg) then
+database:del(bot_id.."lock_cleaner"..msg.chat_id_)
+send(msg.chat_id_, msg.id_, '🔏┇ تم تعطيل » التنظيف التلقائي ')
+return false
+end
+
+if text and text:match("^(ضع وقت التنظيف) (%d+)$") and Owner(msg) then
+local NumLoop = tonumber(text:match("(%d+)"))
+database:set(bot_id..':Timer_Cleaner:'..msg.chat_id_,NumLoop) 
+return send(msg.chat_id_, msg.id_,"📡*¦* تم وضع وقت التنظيف » { *"..NumLoop.."* } ساعه")
+end
+
+if text == "مسح الوسائط" and Owner(msg) then 
+local mmezz = database:smembers(bot_id..":IdsMsgsCleaner:"..msg.chat_id_)
+if #mmezz == 0 then return send(msg.chat_id_, msg.id_,"📮¦ لا يوجد وسائط مجدوله للحذف \n ") end
+for k,v in pairs(mmezz) do DeleteMessage(msg.chat_id_, {[0] = v}) end
+return send(msg.chat_id_, msg.id_,"📮¦ تم مسح جميع الوسائط المجدوله")
+end
+
+if text == "اضف رد عام" and DevTshake(msg) then 
+database:set(bot_id.."Tshake:witt:Rd_All"..msg.sender_user_id_..":"..msg.chat_id_,true)
+database:del(bot_id.."Tshake:witt:jwab_All"..msg.sender_user_id_..":"..msg.chat_id_)
+send(msg.chat_id_, msg.id_,"📥┇  ارسل الكلمه التري تريد اضافتها للرد العام")
+return false 
+end
+
+if text and DevTshake(msg) and database:get(bot_id.."Tshake:witt:Rd_All"..msg.sender_user_id_..":"..msg.chat_id_) then
+database:del(bot_id.."Tshake:witt:Rd_All"..msg.sender_user_id_..":"..msg.chat_id_)
+print(database:set(bot_id.."Tshake:witt:jwab_All"..msg.sender_user_id_..":"..msg.chat_id_,text))
+send(msg.chat_id_, msg.id_, '📥┇ الان ارسل الرد الذي تريد اضافته للعام \n☑┇ يمكنك اضافه الى النص :\n- `#username` > اسم المستخدم\n- `#msgs` > عدد رسائل المستخدم\n- `#name` > اسم المستخدم\n- `#id` > ايدي المستخدم\n- `#stast` > موقع المستخدم \n- `#edit` > عدد السحكات ')
+return false
+end
+
+if text and DevTshake(msg) and database:get(bot_id.."Tshake:witt:jwab_All"..msg.sender_user_id_..":"..msg.chat_id_) then
+Klma = database:get(bot_id.."Tshake:witt:jwab_All"..msg.sender_user_id_..":"..msg.chat_id_)
+Jwab = text
+database:hset(bot_id..':Replay:Source:',Klma,Jwab)
+send(msg.chat_id_, msg.id_, '\n|تم اضافته للرد العام بنجاح .')
+database:del(bot_id.."Tshake:witt:jwab_All"..msg.sender_user_id_..":"..msg.chat_id_)
+return false
+end
+
+
+if text == "مسح الردود العامه" and DevTshake(msg) then 
+local rdood = database:del(bot_id..':Replay:Source:')
+if #rdood==0 then return send(msg.chat_id_, msg.id_,'🚸*¦* لا يوجد ردود مضافه حاليا \n❕') end
+send(msg.chat_id_, msg.id_,"📥┇  تم حذف الردود العامه")
+return false 
+end
+
+if text == 'الردود العامه' and DevTshake(msg) then
+local rdood = database:hkeys(bot_id..':Replay:Source:')
+if #rdood==0 then return send(msg.chat_id_, msg.id_,'🚸*¦* لا يوجد ردود مضافه حاليا \n❕') end
+local message = '🛑*¦* الردود العامه في البوت :   :\n\n'
+for i=1, #rdood 	do message = message ..i..' - *{* '..	rdood[i]..' *}*\n' end
+message = message..'\n➖➖➖'
+return send(msg.chat_id_, msg.id_,message)
+end
+
+
+if text == 'تعين الايدي عام' and DevTshake(msg) then
+database:setex(bot_id.."Tshake:Set:Id:All"..msg.chat_id_..""..msg.sender_user_id_,240,true)  
+send(msg.chat_id_, msg.id_,[[
+   ☑┇ ارسل الان النص
+   ☑┇ يمكنك اضافه :
+   - `#username` > اسم المستخدم
+   - `#msgs` > عدد رسائل المستخدم
+   - `#photos` > عدد صور المستخدم
+   - `#id` > ايدي المستخدم
+   - `#auto` > تفاعل المستخدم
+   - `#stast` > موقع المستخدم 
+   - `#edit` > عدد السحكات
+   - `#game` > المجوهرات
+   - `#AddMem` > عدد الجهات
+   - `#Description` > تعليق الصوره
+   ]])
+return false  
+end 
+
+if text == 'حذف الايدي عام' or text == 'مسح الايدي عام' and DevTshake(msg) then
+database:del(bot_id.."Tshake:KleshIDALLBOT")
+send(msg.chat_id_, msg.id_, '📌┇تم ازالة كليشة الايدي ')
+return false  
+end 
+
+if database:get(bot_id.."Tshake:Set:Id:All"..msg.chat_id_..""..msg.sender_user_id_) then 
+database:del(bot_id.."Tshake:Set:Id:All"..msg.chat_id_..""..msg.sender_user_id_) 
+if text == 'الغاء' then 
+send(msg.chat_id_, msg.id_,"📫┇تم الغاء تعين الايدي عام") 
+return false  
+end 
+database:set(bot_id.."Tshake:KleshIDALLBOT",text:match("(.*)"))
+send(msg.chat_id_, msg.id_,'📌┇تم تعين الايدي عام')   
+return false 
+end
+
+
+
+   
+   if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
+   function Function_Tshake(extra, result, success)
+      tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
+         if data.first_name_ == false then
+         send(msg.chat_id_, msg.id_,'👤┇ الحساب محذوف لا توجد معلوماته ')
+         return false
+         end
+         if data.username_ then
+         UserName_User = '@'..data.username_
+         else
+         UserName_User = 'لا يوجد'
+         end
+         local Id = data.id_
+         local Status_Gps = database:get(bot_id.."Tshake:Comd:New:rt:User:"..msg.chat_id_..Id) or Get_Rank(Id,msg.chat_id_)
+         send(msg.chat_id_, msg.id_,'🔘┇ايديه - '..Id..'\n📌┇معرفه - ['..UserName_User..']\n🚸┇رتبته - '..Status_Gps..'\n💠┇ نوع الكشف : بالرد - ') 
+      end,nil)
+   end
+   tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+   return false
+   end
+   
+   if text and text:match("^كشف @(.*)$")  then
+      print(text)
+print(text)
+print(text)
+print(text)
+   local username = text:match("^كشف @(.*)$")
+   function Function_Tshake(extra, result, success)
+      vardump(data)
+   if result.id_ then
+   tdcli_function ({ID = "GetUser",user_id_ = result.id_},function(arg,data) 
+   if data.username_ then
+   UserName_User = '@'..data.username_
+   else
+   UserName_User = 'لا يوجد'
+   end
+   local Id = data.id_
+   local Status_Gps = database:get(bot_id.."Tshake:Comd:New:rt:User:"..msg.chat_id_..Id) or Get_Rank(Id,msg.chat_id_)
+   send(msg.chat_id_, msg.id_,'🔘┇ايديه - '..Id..'\n📌┇معرفه - ['..UserName_User..']\n🚸┇رتبته - '..Status_Gps..'\n💠┇ نوع الكشف : بالمعرف - ') 
+   end,nil)   
+   else
+   send(msg.chat_id_, msg.id_,'👤┇لا يوجد حساب بهاذا المعرف')
+   end
+   end
+   tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+   return false
+   end
+----==========================================================================================================
+----==========================================================================================================
 if text == "غادر" then 
 if DevBot(msg) and not database:get(bot_id.."Tshake:Left:Bot"..msg.chat_id_) then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
@@ -5093,36 +5069,6 @@ if text == "تعطيل المغادره" and DevTshake(msg) then
 database:set(bot_id.."Tshake:Left:Bot"..msg.chat_id_,true)   
 send(msg.chat_id_, msg.id_, "📫┇تم تعطيل مغادرة البوت") 
 return false 
-end
-if text == (database:get(bot_id.."Tshake:Name:Bot") or "تشاكيx") then
-Namebot = (database:get(bot_id.."Tshake:Name:Bot") or "تشاكيx")
-local namebot = {
-"عمري فداك "..Namebot.. " كول حب ",
-"كول حبيبي ؟ اني "..Namebot,
-'ها حبي وياك مكتب ئلسيد .',
-'الو الو رد مخنوك',
-'ها يحلو كول',
-'عمري الحلو',
-'صاعد اتصال ويا الحب دقيقة وجيك 😘💘',
-'مشغول حالياً 🌚🌸',
-'لابسك لتلح',
-" هايروحي؟ "..Namebot,
-}
-name = math.random(#namebot)
-send(msg.chat_id_, msg.id_, namebot[name]) 
-return false 
-end
-
-if text == "بوت" then
-Namebot = (database:get(bot_id.."Tshake:Name:Bot") or "تشاكيx")
-send(msg.chat_id_, msg.id_," ["..Namebot.."] ") 
-end
-if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
-if DevTshake(msg) then
-database:setex(bot_id.."Tshake:Set:Name:Bot"..msg.sender_user_id_,300,true) 
-send(msg.chat_id_, msg.id_,"📫┇ ارسل لي الاسم الان ")  
-end
-return false
 end
 
 if text ==("مسح المطرودين") and Addictive(msg) then    
@@ -5644,7 +5590,7 @@ local Texting = {
 "عمري الحلوين 💘",
 }
 local Description = Texting[math.random(#Texting)]
-local get_id = database:get(bot_id.."Tshake:Klesh:Id:Bot"..msg.chat_id_)
+local get_id = database:get(bot_id.."Tshake:Klesh:Id:Bot"..msg.chat_id_) or database:get(bot_id.."Tshake:KleshIDALLBOT")
 if not database:get(bot_id..'Tshake:Lock:ID:Bot:Photo'..msg.chat_id_) then
 if taha.photos_[0] then
 if get_id then
@@ -7032,12 +6978,7 @@ end
 end ---- Chat_Type = 'GroupBot' 
 end ---- Chat_Type = 'GroupBot' 
 if text == 'تفعيل' and DevBot(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'🚸┇البوت ليس ادمن يرجى ترقيتي !') 
 return false  
@@ -7095,12 +7036,7 @@ end,nil)
 end,nil)
 end
 if text == 'تعطيل' and DevBot(msg) then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'Tshake:Chek:Groups',msg.chat_id_) then
@@ -7139,12 +7075,7 @@ end,nil)
 end,nil) 
 end
 if text == 'تفعيل' and not DevBot(msg) and not database:get(bot_id..'Tshake:Free:Add:Bots') then 
-local res = https.request('https://tshakex.gq/api/TshakeX.php?id='..msg.sender_user_id_)
-if res then
-if res == 'false' then
-send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@TshakeX] ⚜️')   
-return false 
-end end
+
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'🚸┇البوت ليس ادمن يرجى ترقيتي !') 
 return false  
@@ -9006,6 +8937,66 @@ database:set(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_,'true')
 send(msg.chat_id_, msg.id_,'\nتم تفعيل تحقق' ) 
 end 
 
+--======================================================================================================
+--======================================================================================================
+if Addictive(msg) then 
+
+
+if (msg.content_.ID == "MessagePhoto" 
+or msg.content_.ID == "MessageSticker" 
+or msg.content_.ID == "MessageVoice" 
+or msg.content_.ID == "MessageAudio" 
+or msg.content_.ID == "MessageVideo" 
+or msg.content_.ID == "MessageAnimation" 
+or msg.content_.ID == "MessageUnsupported") 
+and database:get(bot_id.."lock_cleaner"..msg.chat_id_) then
+print("Clener >>> ")
+database:sadd(bot_id..":IdsMsgsCleaner:"..msg.chat_id_,msg.id_)
+Timerr = database:get(bot_id..':Timer_Cleaner:'..msg.chat_id_)
+if Timerr then 
+Timerr = tonumber(Timerr)
+Timerr = 60*60*Timerr
+end
+database:setex(bot_id..":SetTimerCleaner:"..msg.chat_id_..msg.id_,Timerr or 21600,true)  
+end
+local Cleaner = database:smembers(bot_id..":IdsMsgsCleaner:"..msg.chat_id_)
+for k,v in pairs(Cleaner) do
+if not database:get(bot_id..":SetTimerCleaner:"..msg.chat_id_..v) then
+DeleteMessage(msg.chat_id_, {[0] = v}) 
+database:srem(bot_id..":IdsMsgsCleaner:"..msg.chat_id_,v)
+print("MSG DELET CLEANER : "..v)
+else
+print("MSG List CLEANER : "..v.." : Lodding ...")
+end
+end
+end
+   
+if text then
+Replay = database:hget(bot_id..':Replay:Source:',text)
+if Replay then
+tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,data)
+local NumMsg = database:get(bot_id..'Tshake:messageUser'..msg.chat_id_..':'..msg.sender_user_id_) or 0
+local TotalMsg = Total_message(NumMsg)
+local Status_Gps = Get_Rank(msg.sender_user_id_,msg.chat_id_)
+local message_edit = database:get(bot_id..'Tshake:message_edit'..msg.chat_id_..msg.sender_user_id_) or 0
+local Text = arg.Replay
+local Text = Text:gsub('#username',(data.username_ or 'لا يوجد')) 
+local Text = Text:gsub('#name',data.first_name_)
+local Text = Text:gsub('#id',msg.sender_user_id_)
+local Text = Text:gsub('#edit',message_edit)
+local Text = Text:gsub('#msgs',NumMsg)
+local Text = Text:gsub('#stast',Status_Gps)
+send(msg.chat_id_, msg.id_, Text)
+end,{Replay=Replay})
+return false
+end
+end
+
+
+--======================================================================================================
+--======================================================================================================
+
+
 if msg.content_.ID == "MessageChatJoinByLink" and database:get(bot_id..'Tshake:nwe:mem:group'..msg.chat_id_) == 'true'then
 numphoto = {'3','8','9','6'}
 numphotoid = numphoto[math.random(#numphoto)]
@@ -9075,6 +9066,21 @@ database:set(bot_id..'Tshake:User:Name'..msg.sender_user_id_,data.username_)
 end;end,nil)   
 ------------------------------------------------------------------------
 if msg.content_.ID == "MessageChatAddMembers" then  
+
+   ---==========================================
+   ---==========================================
+if msg.content_.members_[0].id_ == tonumber(bot_id) then 
+print("it is Bot")
+Namebot = (database:get(bot_id.."Tshake:Name:Bot") or "تشاكي")
+local Texti = "↞ اهلين انا + "..Namebot.." 🐉\n\n↞ اختصاصي ادارة المجموعات من السبام والخ..\n↞ للتفعيل ارفعني مشرف وارسل تفعيل في المجموعه ."
+keyboard = {} 
+keyboard.inline_keyboard ={{{text = "اضفني", switch_inline_query="أنا بوت حمايه اضيفوني في مجموعتكم لزيادة الامان ."}}}
+local msg_id = msg.id_/2097152/0.5
+local res = https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Texti).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+   ---==========================================
+   ---==========================================
 database:set(bot_id.."Tshake:Who:Added:Me"..msg.chat_id_..":"..msg.content_.members_[0].id_,msg.sender_user_id_)
 local mem_id = msg.content_.members_  
 local Bots = database:get(bot_id.."Tshake:Lock:Bot:kick"..msg.chat_id_) 
