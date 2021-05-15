@@ -1,4 +1,4 @@
-TshAkE
+Tshakex
 ==============
 
 ______________________________________________________________________________________________________________________
@@ -8,7 +8,7 @@ Installation
 
 install :
 
-```https://github.com/TshAkEAb/TshAkE && cd TshAkE && chmod +x install.sh && ./install.sh```
+```git clone https://github.com/TEAMTshakeX/TshAkEx && cd TshAkEx && chmod +x install.sh && ./install.sh```
 
 ______________________________________________________________________________________________________________________
 
@@ -41,7 +41,7 @@ Run bot
 ______________________________________________________________________________________________________________________
 
 
-```./Tshake/ts```
+```./Tshakex/ts```
 
 ______________________________________________________________________________________________________________________
 
@@ -50,7 +50,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (TM) 2018 **TshAkE**
+Copyright (TM) 2018 **Tshakex**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
