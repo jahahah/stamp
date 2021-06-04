@@ -84,21 +84,21 @@ RunTshake:write([[
 cd $HOME/TshAkEx
 token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
 rm -fr Tshake.lua
-wget "https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/Tshake.lua"
+wget "https://raw.githubusercontent.com/jahahah/stamp/master/stamp.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./Tshake.lua -p PROFILE --bot=$token
+./tg -s ./stamp.lua -p PROFILE --bot=$token
 done
 ]])
 RunTshake:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/TshAkEx
+cd $HOME/stamp
 while(true) do
 rm -fr ../.telegram-cli
-screen -S TshAkE -X kill
-screen -S TshAkE ./Tshake
+screen -S stamp -X kill
+screen -S stamp ./stamp
 done
 ]])
 RunTs:close()
