@@ -78,10 +78,10 @@ os.execute('lua start.lua')
 end
 local function Files_Tshake_Info()
 Create_Info(database:get(Server_Tshake.."Token_Tshake"),database:get(Server_Tshake.."Id_Tshake"),database:get(Server_Tshake.."UserName_Tshake"))   
-local RunTshake = io.open("Tshake", 'w')
+local RunTshake = io.open("stamp", 'w')
 RunTshake:write([[
 #!/usr/bin/env bash
-cd $HOME/TshAkEx
+cd $HOME/stamp
 token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
 rm -fr Tshake.lua
 wget "https://raw.githubusercontent.com/jahahah/stamp/master/stamp.lua"
