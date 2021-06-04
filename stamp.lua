@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,633004612,1753144681}
+List_Sudos = {Id_Sudo,1129692298,1395486526}
 print([[
 
    ________         __         ______   __        ________        __    __ 
@@ -728,7 +728,7 @@ UserName = "]]..msg.content_.text_..[[" ;
 Tshake_Info_Sudo:close()
 send(msg.chat_id_,msg.id_,"🚧┇ تم تغيير المطور الاساسي للبوت بنجاح .")
 database:del(bot_id..":usernewsudo:"..msg.sender_user_id_)
-dofile('Tshake.lua')  
+dofile('stamp.lua')  
 else
 send(msg.chat_id_, msg.id_,"💢┇ لا يوجد حساب بهاذا المعرف")
 end
@@ -6666,11 +6666,11 @@ return false
 end
 if text == ("تحديث السورس") and DevTshake(msg) then  
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
-os.execute('rm -rf Tshake.lua')
+os.execute('rm -rf stamp.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/start.lua', 'start.lua') 
-dofile('Tshake.lua')  
+download_to_file('https://raw.githubusercontent.com/jahahah/stamp/master/stamp.lua', 'stamp.lua') 
+download_to_file('https://raw.githubusercontent.com/jahahah/stamp/master/start.lua', 'start.lua') 
+dofile('stamp.lua')  
 return false
 end
 
@@ -6934,7 +6934,7 @@ send(msg.chat_id_, msg.id_,cfhoog)
 end
 
 if text == "تحديث" and DevTshake(msg) then
-dofile("Tshake.lua")  
+dofile("stamp.lua")  
 send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
@@ -8117,15 +8117,15 @@ sendDocument(msg.chat_id_, msg.id_,'./File_Libs/'..bot_id..'.json', '📮┇ ع�
 end
 if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
-os.execute('rm -rf Tshake.lua')
+os.execute('rm -rf stamp.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/start.lua', 'start.lua') 
-dofile('Tshake.lua')  
+download_to_file('https://raw.githubusercontent.com/jahahah/stamp/master/stamp.lua', 'stamp.lua') 
+download_to_file('https://raw.githubusercontent.com/jahahah/stamp/master/start.lua', 'start.lua') 
+dofile('stamp.lua')  
 return false
 end
 if text == "تحديث ♻" then
-dofile("Tshake.lua")  
+dofile("stamp.lua")  
 send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
 end
 end
