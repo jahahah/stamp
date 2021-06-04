@@ -8,7 +8,7 @@ chmod +x ts
 ./ts
 }
 get() {
-rm -fr Tshake.lua
+rm -fr stamp.lua
 rm -fr sudo.lua
 wget "https://raw.githubusercontent.com/jahahah/stamp/master/stamp.lua"
 lua start.lua
